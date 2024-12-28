@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"fixfon/wallet_telegram/models"
+	"fixfon/go-telegram-bot-boilerplate/models"
 	"gorm.io/gorm"
 )
 

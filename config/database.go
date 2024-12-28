@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"fixfon/wallet_telegram/migrations"
+	"fixfon/go-telegram-bot-boilerplate/migrations"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

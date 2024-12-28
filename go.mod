@@ -1,4 +1,4 @@
-module fixfon/wallet_telegram
+module fixfon/go-telegram-bot-boilerplate
 
 go 1.23.4
 
