@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fixfon/go-telegram-bot-boilerplate/config"
 	"log"
 	"time"
 
@@ -8,9 +9,14 @@ import (
 )
 
 func main() {
+	if err := config.LoadConfig(); err != nil {
+		log.Fatal("Cannot load config:", err)
+	}
+
+	config.ConnectDB()
+
 	pref := client.Settings{
-		// Token:  os.Getenv("TOKEN"),
-		Token:  "7616059022:AAEoSX9QZxPKmH2WcdRWNkZZMpkfXkVjywQ",
+		Token:  config.AppConfig.TelegramToken,
 		Poller: &client.LongPoller{Timeout: 10 * time.Second},
 	}
 
@@ -23,8 +29,6 @@ func main() {
 	bot.Handle("/register", func(c client.Context) error {
 		return c.Send("Hello!")
 	})
-
-
 
 	bot.Start()
 }

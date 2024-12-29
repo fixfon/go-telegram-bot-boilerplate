@@ -3,6 +3,7 @@ module fixfon/go-telegram-bot-boilerplate
 go 1.23.4
 
 require (
+	github.com/joho/godotenv v1.5.1
 	gopkg.in/telebot.v4 v4.0.0-beta.4
 	gorm.io/driver/postgres v1.5.11
 	gorm.io/gorm v1.25.12
