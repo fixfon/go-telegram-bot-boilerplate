@@ -8,4 +8,5 @@ type User struct {
 	Username   string `gorm:"size:255"`
 	FirstName  string `gorm:"size:255"`
 	LastName   string `gorm:"size:255"`
+	IsOwner    bool   `gorm:"default:false"`
 }
