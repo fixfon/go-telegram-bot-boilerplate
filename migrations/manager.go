@@ -22,10 +22,6 @@ var migrations = []struct {
 }
 
 func RunMigrations(db *gorm.DB) error {
-	// Create migrations table if it doesn't exist
-	if err := db.AutoMigrate(&Migration{}); err != nil {
-		return err
-	}
 
 	// Check and run each migration
 	for _, migration := range migrations {
